@@ -4,14 +4,14 @@ import Navbar from './components/Navbar.vue';
 </script>
 
 <template>
-  <header>
+  <header v-if="$route.name !== 'home'">
     <Navbar />
-    <!-- <nav>
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
-    </nav> -->
   </header>
 
+  <!-- <nav>
+    <RouterLink to="/">Home</RouterLink>
+    <RouterLink to="/about">About</RouterLink>
+  </nav> -->
   <RouterView />
 </template>
 
